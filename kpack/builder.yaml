@@ -1,0 +1,16 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuilder
+metadata:
+  name: julia-builder
+spec:
+  tag: $CONTAINER_REGISTRY/tap-images
+  stack:
+    name: base-jammy
+    kind: ClusterStack
+  store: {}
+  serviceAccountRef:
+    name: kp-default-repository-serviceaccount
+    namespace: kpack
+  order:
+  - group:
+    - id: julia

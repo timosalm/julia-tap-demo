@@ -1,0 +1,9 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuildpack
+metadata:
+  name: julia-buildpack
+spec:
+  serviceAccountRef:
+    name: dependencies-pull-serviceaccount
+    namespace: tbs-full-deps
+  image: $BUILDPACK_CONTAINER_TAG
