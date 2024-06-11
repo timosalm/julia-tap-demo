@@ -1,4 +1,11 @@
 # Demo for the configuration of a custom Julia buildpack in Tanzu Application Platform (TAP)
+
+## Important Files
+- [package.toml](package.toml) Config file for packaging the buildpack for distribution as OCI image
+- [kpack/buildpack.yaml](kpack/buildpack.yaml) The kpack configuration for a an external buildpack
+- [kpack/builder.yaml](kpack/builder.yaml) The kpack configuration for a builder image that includes the stack and buildpacks needed to build an OCI image from your app source code
+- [workload.yaml](workload.yaml) The workload configuration for TAP, which is the only configuration relevant for developers
+
 ## Package and push buildpack for Tanzu Application Platform
 ```
 export CONTAINER_REGISTRY=<my-registry>
